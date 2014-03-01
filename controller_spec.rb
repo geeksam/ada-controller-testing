@@ -19,4 +19,14 @@ describe CampfirePoster do
 
     CampfirePoster.post message
   end
+
+  it "posts to campfire", remote: true do
+    random_number = rand(100000)
+    CampfirePoster.post message + random_number.to_s
+    
+    # grab a campfire object
+    # open the room we were supposed to post to
+    # check that our message was actually sent to it
+    # (by making sure it includes random_number)
+  end
 end
